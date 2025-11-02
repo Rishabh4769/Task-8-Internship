@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Task 8 Report - VPN Setup and Privacy Protection</title>
+<style>
+    :root {
+        --primary: #1e293b;
+        --secondary: #0f766e;
+        --accent: #06b6d4;
+        --success: #10b981;
+        --warning: #f59e0b;
+        --danger: #ef4444;
+        --light-bg: #f8fafc;
+        --card-bg: #ffffff;
+        --border: #e2e8f0;
+        --text: #1e293b;
+        --text-muted: #64748b;
+    }
+    * {
+        margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+            'Helvetica Neue', sans-serif;
+        background: var(--light-bg);
+        color: var(--text);
+        line-height: 1.6;
+        padding: 20px;
+    }
+    .container { max-width: 920px; margin: 0 auto; }
+    header {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        color: white;
+        padding: 40px 30px;
+        border-radius: 12px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 20px rgba(30, 41, 59, 0.2);
+    }
+    header h1 { font-size: 2.3rem; font-weight: 700; margin-bottom: 6px;}
+    header p { font-size: 1.1rem; opacity: 0.95; font-weight: 300; }
+    .content { display: flex; flex-direction: column; gap: 24px; }
+    .card {
+        background: var(--card-bg);
+        border-radius: 12px;
+        padding: 28px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        border: 1px solid var(--border);
+    }
+    h2 {
+        color: var(--primary);
+        border-bottom: 2px solid var(--accent);
+        font-size: 1.6rem;
+        margin-bottom: 18px;
+        padding-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    h2::before {
+        content: "▸";
+        color: var(--accent);
+        font-size: 1.3rem;
+    }
+    ol, ul { margin: 12px 0; padding-left: 25px; }
+    li { margin: 8px 0; }
+    footer {
+        text-align: center;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border);
+    }
+    .step-image {
+        margin: 15px 0 20px;
+        text-align: center;
+    }
+    .step-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Task 8 Report: VPN Setup and Privacy Protection</h1>
+        <p>Cyber Security Internship</p>
+    </header>
+
+    <div class="content">
+        <div class="card">
+            <h2>Objective</h2>
+            <p>Understand the role of VPNs in protecting privacy and securing communication over the internet.</p>
+        </div>
+
+        <div class="card">
+            <h2>Tools Used</h2>
+            <ul>
+                <li>ProtonVPN (Free tier)</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Process Followed</h2>
+            <ol>
+    <li style="margin-bottom:1.5em; font-weight:bold;">
+        Chose a reputable free VPN service and get signed up. I have chosen ProtonVPN.
+    </li>
+    <hr>
+    <li style="margin-bottom:1.5em; font-weight:bold;">
+        Download and install the VPN client. I will use the browser extension.
+        <div class="step-image">
+            <img src="images/using-extension.png" alt="Using Browser Extension" />
+        </div>
+    </li>
+    <hr>
+    <li style="margin-bottom:1.5em; font-weight:bold;">
+        Connected to a VPN server (closest or any preferred location).
+        <div class="step-image">
+            <img src="images/connecting-vpn.png" alt="Connecting to VPN" />
+        </div>
+    </li>
+    <hr>
+    <li style="margin-bottom:1.5em; font-weight:bold;">
+        Established a secure connection and verified the status.
+        <div class="step-image">
+            <img src="images/connected-to-server.png" alt="After VPN Connection" />
+        </div>
+    </li>
+    <hr>
+    <li style="margin-bottom:1.5em; font-weight:bold;">
+        Verified IP address change using services like <a href="https://whatismyipaddress.com" target="_blank" rel="noopener noreferrer">whatismyipaddress.com</a>.
+        <ul>
+            <li>Before connecting, my IP address was 27.61.213.202</li>
+            <div class="step-image">
+                <img src="images/before-connection-ip.png" alt="Before VPN Connection" />
+            </div>
+            <li>After connecting to the VPN, my IP address changed to 37.19.200.24</li>
+            <div class="step-image">
+                <img src="images/after-connection-ip.png" alt="After VPN Connection" />
+            </div>
+        </ul>
+    </li>
+    <hr>
+    <li style="margin-bottom:1.5em; font-weight:bold;">
+        Browsed websites to confirm traffic encryption and secure connection.
+        <ul>
+            <li>Opened <a href="https://ipleak.net" target="_blank" rel="noopener noreferrer">ipleak.net</a> to check for DNS and WebRTC leaks.</li>
+            <div class="step-image">
+                <img src="images/ipleak-result.png" alt="IP Leak Test Result" />
+            </div>
+            <li>Opened <a href="https://dnsleaktest.com" target="_blank" rel="noopener noreferrer">DNSleaktest.com</a>.
+                <div class="step-image">
+                    <img src="images/dnsleaktest-result.png" alt="No Leak Detected" />
+                </div>
+            </li>
+        </ul>
+    </li>
+    <hr>
+    <li style="margin-bottom:1.5em; font-weight:bold;">
+        Disconnected VPN and compared browsing speed and IP address before and after VPN use.
+    </li>
+    <hr>
+    <li style="margin-bottom:1.5em; font-weight:bold;">
+        Conducted research on VPN encryption protocols and privacy features.
+    </li>
+    <hr>
+    <li style="margin-bottom:1.5em; font-weight:bold;">
+        Compiled a summary on benefits and limitations of using VPNs.
+    </li>
+    <hr>
+</ol>
+
+        </div>
+
+        <div class="card">
+            <h2>VPN Benefits</h2>
+            <ul>
+                <li>Encrypts internet traffic to protect data from interception.</li>
+                <li>Hides real IP address, enhancing anonymity online.</li>
+                <li>Bypasses geo-restrictions to access region-locked content.</li>
+                <li>Secures public Wi-Fi connections against snooping and attacks.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>VPN Limitations</h2>
+            <ul>
+                <li>May reduce network speed due to encryption overhead and routing.</li>
+                <li>Does not guarantee complete anonymity; behavior analytics may still track users.</li>
+                <li>Free VPN services may have data caps or limited server options.</li>
+                <li>Some VPNs may log user data or have weak privacy policies.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Conclusion</h2>
+            <p>This task provided hands-on experience with VPN setup and use, highlighting their importance in privacy protection and the trade-offs such as performance impact and some privacy limitations.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Task 8 Report | Cyber Security Internship | Ministry of MSME, Govt. of India</p>
+    </footer>
+</div>
+</body>
+</html>
